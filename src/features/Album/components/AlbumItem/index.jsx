@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './style.scss';
 
 AlbumItem.propTypes = {
     album: PropTypes.object.isRequired,
@@ -8,7 +9,13 @@ AlbumItem.propTypes = {
 function AlbumItem({ album }) {
     return (
         <div className="album-item">
-            <p>{album.name}</p>
+            <div className="album-item_thumbnail">
+                <img src={album.thumbnailUrl} alt={album.name} />
+
+                {/* Other controll */}
+            </div>
+
+            <p className="album-item_name">{album.name}</p>
         </div>
     );
 }
