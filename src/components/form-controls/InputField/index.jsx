@@ -25,14 +25,14 @@ function InputField(props) {
                     checked={value}
                     inputRef={ref}
                     fullWidth
+                    disabled={disabled}
                 />
             )}
             name={name}
             control={form.control}
 
-
-            label={label}
-            disabled={disabled}
+        // label={label}
+        // disabled={disabled}
         />
     );
 }
